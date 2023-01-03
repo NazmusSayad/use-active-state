@@ -1,0 +1,36 @@
+{
+  "name": "use-active-state",
+  "version": "1.0.4",
+  "description": "",
+  "main": "./dist-mjs/index.js",
+  "scripts": {
+    "dev": "npm-ez dev",
+    "build": "npm-ez build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazmusSayad/use-active-state.git"
+  },
+  "keywords": [],
+  "author": "NazmusSayad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NazmusSayad/use-active-state/issues"
+  },
+  "homepage": "https://github.com/NazmusSayad/use-active-state#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "npm-ez": "latest",
+    "typescript": "latest"
+  },
+  "types": "./dist-mjs/index.d.js",
+  "exports": {
+    ".": {
+      "require": "./dist-cjs/index.js",
+      "import": "./dist-mjs/index.js"
+    }
+  }
+}
