@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from 'react'
-import manageActiveState from './manageActiveState'
+import manageActiveState from './manageActiveState.js'
 
 export default (selector?: string | { current: Element | undefined }) => {
   const [active, setActive] = useState(false)
