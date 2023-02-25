@@ -1,9 +1,16 @@
 import { useCallback, useRef, useState } from 'react'
 import manageActiveState from './manageActiveState.js'
 
-export default (selector?: string | { current: Element | undefined }) => {
+type Selector = string | { current: Element | undefined }
+type Result = [
+  boolean,
+  (boolean?: boolean) => boolean,
+  React.MutableRefObject<Element | undefined>
+]
+
+export default (selector?: Selector): Result => {
   const [active, setActive] = useState(false)
-  const contentRef = useRef()
+  const contentRef = useRef<Element>()
   const activeRef = useRef({ active, selector })
   activeRef.current.active = active
   activeRef.current.selector = selector
